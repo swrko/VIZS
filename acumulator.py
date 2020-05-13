@@ -17,7 +17,7 @@ def vote_acumulator(img):
         x = x_idx[i]
         y = y_idx[i]
 
-        for j in range(len(thetas)):  # calc rho
+        for j in range(len(thetas)):
             rho = int((x * np.cos(thetas[j]) +
                        y * np.sin(thetas[j])) + diag_len)
             acc[rho, j] += 1

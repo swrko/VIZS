@@ -29,10 +29,10 @@ def main():
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-    
+
     acc, rhos, thetas = acumulator.vote_acumulator(canny)
-    indicies, acc = peaks.find_peaks(acc, 10, okolie=10)
-    draw_hl(img, indicies, rhos, thetas, acc)
+    indicies, acc = peaks.find_peaks(acc, 10, okolie=2)
+    draw_hl(img, indicies, rhos, thetas)
 
     cv2.imshow("HT", img)
     if cv2.waitKey(0) & 0xFF == ord('q'):
